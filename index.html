@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多功能在线工具集 - 一站式开发工具平台</title>
+    <meta name="description" content="提供JSON格式化、代码压缩、图片转换、转义工具等多种在线开发工具，一站式解决开发需求">
+    <meta name="keywords" content="在线工具,JSON格式化,代码压缩,图片转换,转义工具,开发工具">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>多功能在线工具集</h1>
+            <p class="subtitle">一站式解决您的开发与内容处理需求 - 提供JSON格式化、代码压缩、图片转换、转义工具等多种实用功能</p>
+        </header>
+
+        <nav>
+            <div class="nav-container">
+                <a href="#json-format" class="nav-link">JSON格式化</a>
+                <a href="#js-compress" class="nav-link">JS压缩</a>
+                <a href="#css-compress" class="nav-link">CSS压缩</a>
+                <a href="#html-compress" class="nav-link">HTML压缩</a>
+                <a href="#png-to-jpg" class="nav-link">PNG转JPG</a>
+                <a href="#escape" class="nav-link">转义工具</a>
+                <a href="#code-diff" class="nav-link">代码对比</a>
+            </div>
+        </nav>
+
+        <div class="modules">
+            <!-- JSON格式化模块 -->
+            <div class="module" id="json-format">
+                <h2>JSON格式化</h2>
+                <div class="input-group">
+                    <label for="json-format-input">输入JSON</label>
+                    <textarea id="json-format-input" placeholder='{"name": "示例", "value": 123}'></textarea>
+                    <div class="hint">输入有效的JSON字符串</div>
+                </div>
+                <div class="action-group">
+                    <button id="json-format-btn">格式化</button>
+                    <button class="copy-btn" data-copy="json-format-output">复制结果</button>
+                </div>
+                <div class="output-group">
+                    <label for="json-format-output">格式化结果</label>
+                    <textarea id="json-format-output" readonly></textarea>
+                </div>
+            </div>
+
+            <!-- JS压缩模块 -->
+            <div class="module" id="js-compress">
+                <h2>JavaScript压缩</h2>
+                <div class="input-group">
+                    <label for="js-compress-input">输入JavaScript代码</label>
+                    <textarea id="js-compress-input"
+                        placeholder="function example() { console.log('Hello World'); }"></textarea>
+                    <div class="hint">输入需要压缩的JavaScript代码</div>
+                </div>
+                <div class="action-group">
+                    <button id="js-compress-btn">压缩</button>
+                    <button class="copy-btn" data-copy="js-compress-output">复制结果</button>
+                </div>
+                <div class="output-group">
+                    <label for="js-compress-output">压缩结果</label>
+                    <textarea id="js-compress-output" readonly></textarea>
+                </div>
+            </div>
+
+            <!-- CSS压缩模块 -->
+            <div class="module" id="css-compress">
+                <h2>CSS压缩</h2>
+                <div class="input-group">
+                    <label for="css-compress-input">输入CSS代码</label>
+                    <textarea id="css-compress-input"
+                        placeholder="body { font-family: Arial; color: #333; }"></textarea>
+                    <div class="hint">输入需要压缩的CSS代码</div>
+                </div>
+                <div class="action-group">
+                    <button id="css-compress-btn">压缩</button>
+                    <button class="copy-btn" data-copy="css-compress-output">复制结果</button>
+                </div>
+                <div class="output-group">
+                    <label for="css-compress-output">压缩结果</label>
+                    <textarea id="css-compress-output" readonly></textarea>
+                </div>
+            </div>
+
+            <!-- HTML压缩模块 -->
+            <div class="module" id="html-compress">
+                <h2>HTML压缩</h2>
+                <div class="input-group">
+                    <label for="html-compress-input">输入HTML代码</label>
+                    <textarea id="html-compress-input" placeholder="<div><p>示例文本</p></div>"></textarea>
+                    <div class="hint">输入需要压缩的HTML代码</div>
+                </div>
+                <div class="action-group">
+                    <button id="html-compress-btn">压缩</button>
+                    <button class="copy-btn" data-copy="html-compress-output">复制结果</button>
+                </div>
+                <div class="output-group">
+                    <label for="html-compress-output">压缩结果</label>
+                    <textarea id="html-compress-output" readonly></textarea>
+                </div>
+            </div>
+
+            <!-- PNG转JPG模块 -->
+            <div class="module" id="png-to-jpg">
+                <h2>PNG转JPG</h2>
+                <div class="input-group">
+                    <label for="png-to-jpg-input">上传PNG图片</label>
+                    <input type="file" id="png-to-jpg-input" accept="image/png">
+                    <div class="hint">选择PNG格式图片文件</div>
+
+                    <div class="quality-control">
+                        <label for="jpg-quality">JPG质量:</label>
+                        <input type="range" id="jpg-quality" min="1" max="100" value="90">
+                        <span id="quality-value" class="quality-value">90%</span>
+                    </div>
+                </div>
+                <div class="action-group">
+                    <button id="png-to-jpg-btn">转换</button>
+                    <button id="download-jpg-btn" class="download-btn" disabled>下载JPG</button>
+                </div>
+                <div class="output-group">
+                    <label>转换结果</label>
+                    <div id="png-to-jpg-output" class="image-preview"></div>
+                </div>
+            </div>
+
+            <!-- 转义模块 -->
+            <div class="module" id="escape">
+                <h2>转义工具</h2>
+                <div class="input-group">
+                    <label for="escape-input">输入文本</label>
+                    <textarea id="escape-input" placeholder='{"name": "示例", "value": 123}'></textarea>
+                    <div class="hint">输入需要转义的文本</div>
+                </div>
+                <div class="action-group">
+                    <button id="escape-btn">转义</button>
+                    <button class="copy-btn" data-copy="escape-output">复制结果</button>
+                </div>
+                <div class="output-group">
+                    <label for="escape-output">转义结果</label>
+                    <textarea id="escape-output" readonly></textarea>
+                </div>
+            </div>
+
+            <!-- 代码对比模块 -->
+            <div class="module" id="code-diff">
+                <h2>代码对比</h2>
+                <div class="code-comparison-container">
+                    <div class="code-input-group">
+                        <label for="original-code">原始代码</label>
+                        <textarea id="original-code" placeholder="请输入原始代码..."></textarea>
+                    </div>
+                    <div class="code-input-group">
+                        <label for="modified-code">修改后代码</label>
+                        <textarea id="modified-code" placeholder="请输入修改后的代码..."></textarea>
+                    </div>
+                </div>
+                <div class="action-group">
+                    <button id="compare-code-btn">对比代码</button>
+                    <button id="clear-code-btn" style="background: #6c757d;">清空</button>
+                </div>
+                <div class="output-group">
+                    <label>对比结果</label>
+                    <div id="code-diff-output" class="comparison-result">
+                        <div class="diff-header">
+                            <span>代码差异</span>
+                            <span class="diff-stats" id="diff-stats">-</span>
+                        </div>
+                        <div id="diff-content" class="diff-content">
+                            <div class="diff-line diff-empty">
+                                <div class="diff-line-number"></div>
+                                <div class="diff-line-content">请在上方输入两段代码并点击"对比代码"按钮</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 多功能在线工具集 | 设计简洁，功能实用 | 提供JSON格式化、代码压缩、图片转换、转义工具等多种实用功能</p>
+        </footer>
+    </div>
+
+    <script>
+        // 平滑滚动到锚点
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 复制功能
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-copy');
+                const outputTextarea = document.getElementById(targetId);
+                outputTextarea.select();
+                document.execCommand('copy');
+
+                // 显示复制成功提示
+                const originalText = btn.textContent;
+                btn.textContent = '已复制!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 1500);
+            });
+        });
+
+        // JSON格式化功能
+        document.getElementById('json-format-btn').addEventListener('click', () => {
+            const input = document.getElementById('json-format-input').value.trim();
+            const output = document.getElementById('json-format-output');
+
+            if (!input) {
+                output.value = '请输入JSON字符串';
+                return;
+            }
+
+            try {
+                const parsed = JSON.parse(input);
+                output.value = JSON.stringify(parsed, null, 2);
+            } catch (e) {
+                output.value = 'JSON格式错误: ' + e.message;
+            }
+        });
+
+        // JS压缩功能
+        document.getElementById('js-compress-btn').addEventListener('click', () => {
+            const input = document.getElementById('js-compress-input').value.trim();
+            const output = document.getElementById('js-compress-output');
+
+            if (!input) {
+                output.value = '请输入JavaScript代码';
+                return;
+            }
+
+            // 简单的JS压缩模拟（移除注释和空白）
+            let compressed = input
+                .replace(/\/\*[\s\S]*?\*\//g, '') // 移除多行注释
+                .replace(/\/\/.*/g, '') // 移除单行注释
+                .replace(/\s+/g, ' ') // 将多个空白字符替换为一个空格
+                .replace(/\s*([{}()\[\];,=+*\/%-])\s*/g, '$1') // 移除运算符周围的空格
+                .trim();
+
+            output.value = compressed;
+        });
+
+        // CSS压缩功能
+        document.getElementById('css-compress-btn').addEventListener('click', () => {
+            const input = document.getElementById('css-compress-input').value.trim();
+            const output = document.getElementById('css-compress-output');
+
+            if (!input) {
+                output.value = '请输入CSS代码';
+                return;
+            }
+
+            // 简单的CSS压缩模拟
+            let compressed = input
+                .replace(/\/\*[\s\S]*?\*\//g, '') // 移除注释
+                .replace(/\s+/g, ' ') // 将多个空白字符替换为一个空格
+                .replace(/\s*([{}:;,])\s*/g, '$1') // 移除选择器和属性周围的空格
+                .replace(/;}/g, '}') // 移除最后一个分号
+                .trim();
+
+            output.value = compressed;
+        });
+
+        // HTML压缩功能
+        document.getElementById('html-compress-btn').addEventListener('click', () => {
+            const input = document.getElementById('html-compress-input').value.trim();
+            const output = document.getElementById('html-compress-output');
+
+            if (!input) {
+                output.value = '请输入HTML代码';
+                return;
+            }
+
+            // 简单的HTML压缩模拟
+            let compressed = input
+                .replace(/\s+/g, ' ') // 将多个空白字符替换为一个空格
+                .replace(/>\s+</g, '><') // 移除标签之间的空格
+                .trim();
+
+            output.value = compressed;
+        });
+
+        // PNG转JPG功能
+        const pngInput = document.getElementById('png-to-jpg-input');
+        const qualitySlider = document.getElementById('jpg-quality');
+        const qualityValue = document.getElementById('quality-value');
+        const convertBtn = document.getElementById('png-to-jpg-btn');
+        const downloadBtn = document.getElementById('download-jpg-btn');
+        const outputDiv = document.getElementById('png-to-jpg-output');
+
+        let convertedImageUrl = null;
+
+        // 更新质量显示
+        qualitySlider.addEventListener('input', () => {
+            qualityValue.textContent = qualitySlider.value + '%';
+        });
+
+        // 转换按钮点击事件
+        convertBtn.addEventListener('click', () => {
+            if (!pngInput.files || !pngInput.files[0]) {
+                outputDiv.innerHTML = '<p style="color: red;">请选择PNG图片文件</p>';
+                return;
+            }
+
+            const file = pngInput.files[0];
+            if (file.type !== 'image/png') {
+                outputDiv.innerHTML = '<p style="color: red;">请选择PNG格式的图片</p>';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = new Image();
+                img.onload = function () {
+                    // 创建Canvas进行转换
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    const ctx = canvas.getContext('2d');
+
+                    // 填充白色背景（PNG透明背景转换为JPG时需要）
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    // 绘制图片
+                    ctx.drawImage(img, 0, 0);
+
+                    // 获取JPG数据URL
+                    const quality = parseInt(qualitySlider.value) / 100;
+                    const jpgDataUrl = canvas.toDataURL('image/jpeg', quality);
+
+                    // 显示结果
+                    outputDiv.innerHTML = `
+                        <div class="image-container">
+                            <h3>原始PNG图片</h3>
+                            <img src="${e.target.result}" alt="原始PNG图片">
+                            <div class="image-info">
+                                尺寸: ${img.width} × ${img.height} 像素<br>
+                                文件大小: ${(file.size / 1024).toFixed(2)} KB
+                            </div>
+                        </div>
+                        <div class="image-container">
+                            <h3>转换后的JPG图片</h3>
+                            <img src="${jpgDataUrl}" alt="转换后的JPG图片">
+                            <div class="image-info">
+                                尺寸: ${img.width} × ${img.height} 像素<br>
+                                质量: ${qualitySlider.value}%
+                            </div>
+                        </div>
+                    `;
+
+                    // 保存转换后的图片URL供下载使用
+                    convertedImageUrl = jpgDataUrl;
+                    downloadBtn.disabled = false;
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // 下载按钮点击事件
+        downloadBtn.addEventListener('click', () => {
+            if (!convertedImageUrl) return;
+
+            // 创建下载链接
+            const a = document.createElement('a');
+            a.href = convertedImageUrl;
+            a.download = 'converted_image.jpg';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+
+        // 转义功能
+        document.getElementById('escape-btn').addEventListener('click', () => {
+            const input = document.getElementById('escape-input').value.trim();
+            const output = document.getElementById('escape-output');
+
+            if (!input) {
+                output.value = '请输入需要转义的文本';
+                return;
+            }
+
+            // 转义处理
+            let escaped = input
+                .replace(/\\/g, '\\\\')
+                .replace(/"/g, '\\"')
+                .replace(/'/g, "\\'")
+                .replace(/\n/g, '\\n')
+                .replace(/\r/g, '\\r')
+                .replace(/\t/g, '\\t')
+                .replace(/\f/g, '\\f')
+                .replace(/\v/g, '\\v');
+
+            output.value = escaped;
+        });
+
+        // 代码对比功能
+        document.getElementById('compare-code-btn').addEventListener('click', () => {
+            const originalCode = document.getElementById('original-code').value;
+            const modifiedCode = document.getElementById('modified-code').value;
+            const diffContent = document.getElementById('diff-content');
+            const diffStats = document.getElementById('diff-stats');
+
+            if (!originalCode && !modifiedCode) {
+                diffContent.innerHTML = `
+                    <div class="diff-line diff-empty">
+                        <div class="diff-line-number"></div>
+                        <div class="diff-line-content">请输入需要对比的代码</div>
+                    </div>
+                `;
+                diffStats.textContent = '-';
+                return;
+            }
+
+            if (originalCode === modifiedCode) {
+                diffContent.innerHTML = `
+                    <div class="diff-line diff-empty">
+                        <div class="diff-line-number"></div>
+                        <div class="diff-line-content">两段代码完全相同，没有差异</div>
+                    </div>
+                `;
+                diffStats.textContent = '0 新增, 0 删除';
+                return;
+            }
+
+            // 计算差异
+            const diff = computeDiff(originalCode, modifiedCode);
+            renderDiff(diff, diffContent);
+
+            // 更新统计信息
+            const added = diff.filter(line => line.type === 'added').length;
+            const removed = diff.filter(line => line.type === 'removed').length;
+            diffStats.textContent = `${added} 新增, ${removed} 删除`;
+        });
+
+        // 清空代码对比
+        document.getElementById('clear-code-btn').addEventListener('click', () => {
+            document.getElementById('original-code').value = '';
+            document.getElementById('modified-code').value = '';
+            document.getElementById('diff-content').innerHTML = `
+                <div class="diff-line diff-empty">
+                    <div class="diff-line-number"></div>
+                    <div class="diff-line-content">请在上方输入两段代码并点击"对比代码"按钮</div>
+                </div>
+            `;
+            document.getElementById('diff-stats').textContent = '-';
+        });
+
+        // 计算代码差异
+        function computeDiff(original, modified) {
+            const originalLines = original.split('\n');
+            const modifiedLines = modified.split('\n');
+
+            const diff = [];
+            let i = 0, j = 0;
+
+            while (i < originalLines.length || j < modifiedLines.length) {
+                if (i < originalLines.length && j < modifiedLines.length &&
+                    originalLines[i] === modifiedLines[j]) {
+                    // 相同的行
+                    diff.push({
+                        type: 'unchanged',
+                        originalLine: i + 1,
+                        modifiedLine: j + 1,
+                        content: originalLines[i]
+                    });
+                    i++;
+                    j++;
+                } else {
+                    // 查找删除的行
+                    let foundInModified = false;
+                    for (let k = j; k < modifiedLines.length; k++) {
+                        if (originalLines[i] === modifiedLines[k]) {
+                            foundInModified = true;
+                            // 添加新增的行
+                            for (let l = j; l < k; l++) {
+                                diff.push({
+                                    type: 'added',
+                                    originalLine: null,
+                                    modifiedLine: l + 1,
+                                    content: modifiedLines[l]
+                                });
+                            }
+                            j = k;
+                            break;
+                        }
+                    }
+
+                    // 查找新增的行
+                    let foundInOriginal = false;
+                    for (let k = i; k < originalLines.length; k++) {
+                        if (originalLines[k] === modifiedLines[j]) {
+                            foundInOriginal = true;
+                            // 添加删除的行
+                            for (let l = i; l < k; l++) {
+                                diff.push({
+                                    type: 'removed',
+                                    originalLine: l + 1,
+                                    modifiedLine: null,
+                                    content: originalLines[l]
+                                });
+                            }
+                            i = k;
+                            break;
+                        }
+                    }
+
+                    if (!foundInModified && !foundInOriginal) {
+                        // 既不是删除也不是新增，可能是修改
+                        if (i < originalLines.length) {
+                            diff.push({
+                                type: 'removed',
+                                originalLine: i + 1,
+                                modifiedLine: null,
+                                content: originalLines[i]
+                            });
+                            i++;
+                        }
+                        if (j < modifiedLines.length) {
+                            diff.push({
+                                type: 'added',
+                                originalLine: null,
+                                modifiedLine: j + 1,
+                                content: modifiedLines[j]
+                            });
+                            j++;
+                        }
+                    }
+                }
+            }
+
+            return diff;
+        }
+
+        // 渲染差异结果
+        function renderDiff(diff, container) {
+            container.innerHTML = '';
+
+            diff.forEach(line => {
+                const lineElement = document.createElement('div');
+                lineElement.className = `diff-line diff-${line.type}`;
+
+                const lineNumberElement = document.createElement('div');
+                lineNumberElement.className = 'diff-line-number';
+                lineNumberElement.textContent = line.type === 'added' ? '' : line.originalLine;
+
+                const lineContentElement = document.createElement('div');
+                lineContentElement.className = 'diff-line-content';
+                lineContentElement.textContent = line.content || ' ';
+
+                if (line.type === 'added') {
+                    lineContentElement.innerHTML = `<span style="color: #155724;">+ ${line.content || ' '}</span>`;
+                } else if (line.type === 'removed') {
+                    lineContentElement.innerHTML = `<span style="color: #721c24;">- ${line.content || ' '}</span>`;
+                } else {
+                    lineContentElement.innerHTML = `  ${line.content || ' '}`;
+                }
+
+                lineElement.appendChild(lineNumberElement);
+                lineElement.appendChild(lineContentElement);
+                container.appendChild(lineElement);
+            });
+        }
+    </script>
+</body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9984870413484810"
+    crossorigin="anonymous"></script>
+
+</html>
