@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>多功能在线工具集 - 一站式开发工具平台</title>
+    <title>web在线工具集</title>
     <meta name="description" content="提供JSON格式化、代码压缩、图片转换、转义工具等多种在线开发工具，一站式解决开发需求">
     <meta name="keywords" content="在线工具,JSON格式化,代码压缩,图片转换,转义工具,开发工具">
     <meta name="google-site-verification" content="hl_i7ZDiuJqV5zQ7AeZLI8zNbLQ6hrLszh2HhgzGins" />
@@ -25,7 +25,6 @@
         .container {
             width: 100%;
             margin: 0 auto;
-            padding: 0 20px;
         }
 
         header {
@@ -33,6 +32,9 @@
             padding: 30px 20px;
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
+            height: 0;
+            overflow: hidden;
+            padding: 0;
         }
 
         h1 {
@@ -82,7 +84,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            padding: 30px 0;
+            padding: 30px 20px;
         }
 
         .module {
@@ -476,7 +478,7 @@
             border-top: 1px solid #eee;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1366px) {
             .modules {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -505,8 +507,10 @@
             }
 
             .nav-container {
-                flex-direction: column;
-                align-items: center;
+                white-space: nowrap;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                justify-content: unset;
             }
 
             .nav-link {
@@ -678,7 +682,7 @@
                         <label for="preserve-attributes">保留属性换行</label>
                     </div>
                     <div class="format-option">
-                        <input type="checkbox" id="syntax-highlight" checked>
+                        <input type="checkbox" id="syntax-highlight">
                         <label for="syntax-highlight">语法高亮</label>
                     </div>
                 </div>
@@ -762,7 +766,7 @@
         </div>
 
         <footer>
-            <p>© 2023 多功能在线工具集 | 设计简洁，功能实用 | 提供JSON格式化、代码压缩、图片转换、转义工具等多种实用功能</p>
+            <p>多功能在线工具集 | 设计简洁，功能实用 | 提供JSON格式化、代码压缩、图片转换、转义工具等多种实用功能</p>
         </footer>
     </div>
 
