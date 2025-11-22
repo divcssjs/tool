@@ -3,11 +3,28 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, minimum-scale=1.0"
+    >
     <title>web在线工具集</title>
-    <meta name="description" content="提供JSON格式化、代码压缩、图片转换、转义工具等多种在线开发工具，一站式解决开发需求">
-    <meta name="keywords" content="在线工具,JSON格式化,代码压缩,图片转换,转义工具,开发工具">
-    <meta name="google-site-verification" content="hl_i7ZDiuJqV5zQ7AeZLI8zNbLQ6hrLszh2HhgzGins" />
+    <meta
+        name="description"
+        content="提供JSON格式化、代码压缩、图片转换、转义工具等多种在线开发工具，一站式解决开发需求"
+    >
+    <meta
+        name="keywords"
+        content="在线工具,JSON格式化,代码压缩,图片转换,转义工具,开发工具"
+    >
+    <meta
+        name="google-site-verification"
+        content="hl_i7ZDiuJqV5zQ7AeZLI8zNbLQ6hrLszh2HhgzGins"
+    />
+    <link
+        rel="icon"
+        href="favicon.ico"
+        type="image/x-icon"
+    >
     <style>
         * {
             margin: 0;
@@ -683,193 +700,346 @@
 
         <nav>
             <div class="nav-container">
-                <a href="#js-compress" class="nav-link">JS压缩</a>
-                <a href="#css-compress" class="nav-link">CSS压缩</a>
-                <a href="#html-compress" class="nav-link">HTML压缩</a>
-                <a href="#png-to-jpg" class="nav-link">PNG转JPG</a>
-                <a href="#escape" class="nav-link">转义工具</a>
-                <a href="#json-format" class="nav-link">JSON格式化</a>
-                <a href="#html-format" class="nav-link">HTML格式化</a>
-                <a href="#html-preview" class="nav-link">HTML实时预览</a>
-                <a href="#code-diff" class="nav-link">代码对比</a>
-                <a href="#video-frames" class="nav-link">视频帧提取</a>
+                <a
+                    href="#js-compress"
+                    class="nav-link"
+                >JS压缩</a>
+                <a
+                    href="#css-compress"
+                    class="nav-link"
+                >CSS压缩</a>
+                <a
+                    href="#html-compress"
+                    class="nav-link"
+                >HTML压缩</a>
+                <a
+                    href="#png-to-jpg"
+                    class="nav-link"
+                >PNG转JPG</a>
+                <a
+                    href="#escape"
+                    class="nav-link"
+                >转义工具</a>
+                <a
+                    href="#json-format"
+                    class="nav-link"
+                >JSON格式化</a>
+                <a
+                    href="#html-format"
+                    class="nav-link"
+                >HTML格式化</a>
+                <a
+                    href="#html-preview"
+                    class="nav-link"
+                >HTML实时预览</a>
+                <a
+                    href="#code-diff"
+                    class="nav-link"
+                >代码对比</a>
+                <a
+                    href="#video-frames"
+                    class="nav-link"
+                >视频帧提取</a>
             </div>
         </nav>
 
         <div class="modules">
             <!-- JS压缩模块 -->
-            <div class="module" id="js-compress">
+            <div
+                class="module"
+                id="js-compress"
+            >
                 <h2>JavaScript压缩</h2>
                 <div class="input-group">
                     <label for="js-compress-input">输入JavaScript代码</label>
-                    <textarea id="js-compress-input"
-                        placeholder="function example() { console.log('Hello World'); }"></textarea>
+                    <textarea
+                        id="js-compress-input"
+                        placeholder="function example() { console.log('Hello World'); }"
+                    ></textarea>
                     <div class="hint">输入需要压缩的JavaScript代码</div>
                 </div>
                 <div class="action-group">
                     <button id="js-compress-btn">压缩</button>
-                    <button class="copy-btn" data-copy="js-compress-output">复制结果</button>
+                    <button
+                        class="copy-btn"
+                        data-copy="js-compress-output"
+                    >复制结果</button>
                 </div>
                 <div class="output-group">
                     <label for="js-compress-output">压缩结果</label>
-                    <textarea id="js-compress-output" readonly></textarea>
+                    <textarea
+                        id="js-compress-output"
+                        readonly
+                    ></textarea>
                 </div>
             </div>
 
             <!-- CSS压缩模块 -->
-            <div class="module" id="css-compress">
+            <div
+                class="module"
+                id="css-compress"
+            >
                 <h2>CSS压缩</h2>
                 <div class="input-group">
                     <label for="css-compress-input">输入CSS代码</label>
-                    <textarea id="css-compress-input"
-                        placeholder="body { font-family: Arial; color: #333; }"></textarea>
+                    <textarea
+                        id="css-compress-input"
+                        placeholder="body { font-family: Arial; color: #333; }"
+                    ></textarea>
                     <div class="hint">输入需要压缩的CSS代码</div>
                 </div>
                 <div class="action-group">
                     <button id="css-compress-btn">压缩</button>
-                    <button class="copy-btn" data-copy="css-compress-output">复制结果</button>
+                    <button
+                        class="copy-btn"
+                        data-copy="css-compress-output"
+                    >复制结果</button>
                 </div>
                 <div class="output-group">
                     <label for="css-compress-output">压缩结果</label>
-                    <textarea id="css-compress-output" readonly></textarea>
+                    <textarea
+                        id="css-compress-output"
+                        readonly
+                    ></textarea>
                 </div>
             </div>
 
             <!-- HTML压缩模块 -->
-            <div class="module" id="html-compress">
+            <div
+                class="module"
+                id="html-compress"
+            >
                 <h2>HTML压缩</h2>
                 <div class="input-group">
                     <label for="html-compress-input">输入HTML代码</label>
-                    <textarea id="html-compress-input" placeholder="<div><p>示例文本</p></div>"></textarea>
+                    <textarea
+                        id="html-compress-input"
+                        placeholder="<div><p>示例文本</p></div>"
+                    ></textarea>
                     <div class="hint">输入需要压缩的HTML代码</div>
                 </div>
                 <div class="action-group">
                     <button id="html-compress-btn">压缩</button>
-                    <button class="copy-btn" data-copy="html-compress-output">复制结果</button>
+                    <button
+                        class="copy-btn"
+                        data-copy="html-compress-output"
+                    >复制结果</button>
                 </div>
                 <div class="output-group">
                     <label for="html-compress-output">压缩结果</label>
-                    <textarea id="html-compress-output" readonly></textarea>
+                    <textarea
+                        id="html-compress-output"
+                        readonly
+                    ></textarea>
                 </div>
             </div>
 
             <!-- PNG转JPG模块 -->
-            <div class="module" id="png-to-jpg">
+            <div
+                class="module"
+                id="png-to-jpg"
+            >
                 <h2>PNG转JPG</h2>
                 <div class="input-group">
                     <label for="png-to-jpg-input">上传PNG图片</label>
-                    <input type="file" id="png-to-jpg-input" accept="image/png">
+                    <input
+                        type="file"
+                        id="png-to-jpg-input"
+                        accept="image/png"
+                    >
                     <div class="hint">选择PNG格式图片文件</div>
 
                     <div class="quality-control">
                         <label for="jpg-quality">JPG质量:</label>
-                        <input type="range" id="jpg-quality" min="1" max="100" value="90">
-                        <span id="quality-value" class="quality-value">90%</span>
+                        <input
+                            type="range"
+                            id="jpg-quality"
+                            min="1"
+                            max="100"
+                            value="90"
+                        >
+                        <span
+                            id="quality-value"
+                            class="quality-value"
+                        >90%</span>
                     </div>
                 </div>
                 <div class="action-group">
                     <button id="png-to-jpg-btn">转换</button>
-                    <button id="download-jpg-btn" class="download-btn" disabled>下载JPG</button>
+                    <button
+                        id="download-jpg-btn"
+                        class="download-btn"
+                        disabled
+                    >下载JPG</button>
                 </div>
                 <div class="output-group">
                     <label>转换结果</label>
-                    <div id="png-to-jpg-output" class="image-preview"></div>
+                    <div
+                        id="png-to-jpg-output"
+                        class="image-preview"
+                    ></div>
                 </div>
             </div>
 
             <!-- 转义模块 -->
-            <div class="module" id="escape">
+            <div
+                class="module"
+                id="escape"
+            >
                 <h2>转义工具</h2>
                 <div class="input-group">
                     <label for="escape-input">输入文本</label>
-                    <textarea id="escape-input" placeholder='{"name": "示例", "value": 123}'></textarea>
+                    <textarea
+                        id="escape-input"
+                        placeholder='{"name": "示例", "value": 123}'
+                    ></textarea>
                     <div class="hint">输入需要转义的文本</div>
                 </div>
                 <div class="action-group">
                     <button id="escape-btn">转义</button>
-                    <button class="copy-btn" data-copy="escape-output">复制结果</button>
+                    <button
+                        class="copy-btn"
+                        data-copy="escape-output"
+                    >复制结果</button>
                 </div>
                 <div class="output-group">
                     <label for="escape-output">转义结果</label>
-                    <textarea id="escape-output" readonly></textarea>
+                    <textarea
+                        id="escape-output"
+                        readonly
+                    ></textarea>
                 </div>
             </div>
 
             <!-- JSON格式化模块 - 全宽 -->
-            <div class="module full-width" id="json-format">
+            <div
+                class="module full-width"
+                id="json-format"
+            >
                 <h2>JSON格式化</h2>
                 <div class="input-group">
                     <label for="json-format-input">输入JSON</label>
-                    <textarea id="json-format-input" placeholder='{"name": "示例", "value": 123}'></textarea>
+                    <textarea
+                        id="json-format-input"
+                        placeholder='{"name": "示例", "value": 123}'
+                    ></textarea>
                     <div class="hint">输入有效的JSON字符串</div>
                 </div>
                 <div class="action-group">
                     <button id="json-format-btn">格式化</button>
-                    <button class="copy-btn" data-copy="json-format-output">复制结果</button>
+                    <button
+                        class="copy-btn"
+                        data-copy="json-format-output"
+                    >复制结果</button>
                 </div>
                 <div class="output-group">
                     <label for="json-format-output">格式化结果</label>
-                    <textarea id="json-format-output" readonly></textarea>
+                    <textarea
+                        id="json-format-output"
+                        readonly
+                    ></textarea>
                 </div>
             </div>
 
             <!-- HTML格式化模块 - 全宽 -->
-            <div class="module full-width" id="html-format">
+            <div
+                class="module full-width"
+                id="html-format"
+            >
                 <h2>HTML格式化</h2>
                 <div class="format-options">
                     <div class="format-option">
                         <label for="indent-size">缩进大小:</label>
-                        <input type="number" id="indent-size" min="1" max="8" value="2">
+                        <input
+                            type="number"
+                            id="indent-size"
+                            min="1"
+                            max="8"
+                            value="2"
+                        >
                         <span>空格</span>
                     </div>
                     <div class="format-option">
-                        <input type="checkbox" id="preserve-empty-lines" checked>
+                        <input
+                            type="checkbox"
+                            id="preserve-empty-lines"
+                            checked
+                        >
                         <label for="preserve-empty-lines">保留空行</label>
                     </div>
                     <div class="format-option">
-                        <input type="checkbox" id="preserve-attributes" checked>
+                        <input
+                            type="checkbox"
+                            id="preserve-attributes"
+                            checked
+                        >
                         <label for="preserve-attributes">保留属性换行</label>
                     </div>
                     <div class="format-option">
-                        <input type="checkbox" id="syntax-highlight">
+                        <input
+                            type="checkbox"
+                            id="syntax-highlight"
+                        >
                         <label for="syntax-highlight">语法高亮</label>
                     </div>
                 </div>
                 <div class="input-group">
                     <label for="html-format-input">输入HTML代码</label>
-                    <textarea id="html-format-input" placeholder="<div><p>示例文本</p></div>"></textarea>
+                    <textarea
+                        id="html-format-input"
+                        placeholder="<div><p>示例文本</p></div>"
+                    ></textarea>
                     <div class="hint">输入需要格式化的HTML代码</div>
                 </div>
                 <div class="action-group">
                     <button id="html-format-btn">格式化</button>
-                    <button class="copy-btn" data-copy="html-format-output">复制结果</button>
+                    <button
+                        class="copy-btn"
+                        data-copy="html-format-output"
+                    >复制结果</button>
                 </div>
                 <div class="output-group">
                     <label for="html-format-output">格式化结果</label>
                     <div class="formatted-code-container">
-                        <pre id="html-format-output" class="formatted-code">格式化后的HTML代码将显示在这里</pre>
+                        <pre
+                            id="html-format-output"
+                            class="formatted-code"
+                        >格式化后的HTML代码将显示在这里</pre>
                     </div>
                 </div>
             </div>
 
             <!-- HTML实时预览模块 - 全宽 -->
-            <div class="module full-width" id="html-preview">
+            <div
+                class="module full-width"
+                id="html-preview"
+            >
                 <h2>HTML实时预览</h2>
                 <div class="html-preview-container">
                     <div class="html-input-group">
                         <label for="html-preview-input">输入HTML代码</label>
-                        <textarea id="html-preview-input" placeholder="<h1>Hello World</h1><p>这是一个示例</p>"></textarea>
+                        <textarea
+                            id="html-preview-input"
+                            placeholder="<h1>Hello World</h1><p>这是一个示例</p>"
+                        ></textarea>
                         <div class="hint">输入HTML代码，预览区域将实时更新</div>
                     </div>
                     <div class="preview-group">
                         <label for="html-preview-frame">实时预览</label>
-                        <iframe id="html-preview-frame" class="preview-frame"
-                            srcdoc="<h1>HTML预览区域</h1><p>请在上方输入HTML代码</p>"></iframe>
+                        <iframe
+                            id="html-preview-frame"
+                            class="preview-frame"
+                            srcdoc="<h1>HTML预览区域</h1><p>请在上方输入HTML代码</p>"
+                        ></iframe>
                         <div class="preview-controls">
                             <div class="auto-refresh-toggle">
                                 <label for="auto-refresh">实时更新</label>
                                 <label class="toggle-switch">
-                                    <input type="checkbox" id="auto-refresh" checked>
+                                    <input
+                                        type="checkbox"
+                                        id="auto-refresh"
+                                        checked
+                                    >
                                     <span class="toggle-slider"></span>
                                 </label>
                             </div>
@@ -880,30 +1050,51 @@
             </div>
 
             <!-- 代码对比模块 - 全宽 -->
-            <div class="module full-width" id="code-diff">
+            <div
+                class="module full-width"
+                id="code-diff"
+            >
                 <h2>代码对比</h2>
                 <div class="code-comparison-container">
                     <div class="code-input-group">
                         <label for="original-code">原始代码</label>
-                        <textarea id="original-code" placeholder="请输入原始代码..."></textarea>
+                        <textarea
+                            id="original-code"
+                            placeholder="请输入原始代码..."
+                        ></textarea>
                     </div>
                     <div class="code-input-group">
                         <label for="modified-code">修改后代码</label>
-                        <textarea id="modified-code" placeholder="请输入修改后的代码..."></textarea>
+                        <textarea
+                            id="modified-code"
+                            placeholder="请输入修改后的代码..."
+                        ></textarea>
                     </div>
                 </div>
                 <div class="action-group">
                     <button id="compare-code-btn">对比代码</button>
-                    <button id="clear-code-btn" style="background: #6c757d;">清空</button>
+                    <button
+                        id="clear-code-btn"
+                        style="background: #6c757d;"
+                    >清空</button>
                 </div>
                 <div class="output-group">
                     <label>对比结果</label>
-                    <div id="code-diff-output" class="comparison-result">
+                    <div
+                        id="code-diff-output"
+                        class="comparison-result"
+                    >
                         <div class="diff-header">
                             <span>代码差异</span>
-                            <span class="diff-stats" id="diff-stats">-</span>
+                            <span
+                                class="diff-stats"
+                                id="diff-stats"
+                            >-</span>
                         </div>
-                        <div id="diff-content" class="diff-content">
+                        <div
+                            id="diff-content"
+                            class="diff-content"
+                        >
                             <div class="diff-line diff-empty">
                                 <div class="diff-line-number"></div>
                                 <div class="diff-line-content">请在上方输入两段代码并点击"对比代码"按钮</div>
@@ -914,50 +1105,109 @@
             </div>
 
             <!-- 视频序列帧提取模块 - 全宽 -->
-            <div class="module full-width" id="video-frames">
+            <div
+                class="module full-width"
+                id="video-frames"
+            >
                 <h2>视频序列帧提取</h2>
                 <div class="input-group">
                     <label>上传视频文件</label>
-                    <div class="video-upload-area" id="video-upload-area">
+                    <div
+                        class="video-upload-area"
+                        id="video-upload-area"
+                    >
                         <i>📹</i>
                         <p>点击或拖拽视频文件到此处</p>
                         <p class="browse-link">浏览文件</p>
                         <p class="hint">支持 MP4, WebM, OGG 等常见视频格式</p>
                     </div>
-                    <input type="file" id="video-input" accept="video/*" style="display: none;">
-                    
-                    <div class="video-preview" id="video-preview" style="display: none;">
-                        <video id="video-player" controls></video>
-                        <div class="video-info" id="video-info"></div>
+                    <input
+                        type="file"
+                        id="video-input"
+                        accept="video/*"
+                        style="display: none;"
+                    >
+
+                    <div
+                        class="video-preview"
+                        id="video-preview"
+                        style="display: none;"
+                    >
+                        <video
+                            id="video-player"
+                            controls
+                        ></video>
+                        <div
+                            class="video-info"
+                            id="video-info"
+                        ></div>
                     </div>
-                    
+
                     <div class="extraction-params">
                         <div class="param-group">
                             <label for="frame-interval">帧提取间隔 (秒)</label>
-                            <input type="range" id="frame-interval" min="0.1" max="5" step="0.1" value="1">
-                            <div class="param-value" id="interval-value">1.0 秒</div>
+                            <input
+                                type="range"
+                                id="frame-interval"
+                                min="0.1"
+                                max="5"
+                                step="0.1"
+                                value="1"
+                            >
+                            <div
+                                class="param-value"
+                                id="interval-value"
+                            >1.0 秒</div>
                         </div>
                         <div class="param-group">
                             <label for="max-frames">最大提取帧数</label>
-                            <input type="range" id="max-frames" min="1" max="50" value="10">
-                            <div class="param-value" id="frames-value">10 帧</div>
+                            <input
+                                type="range"
+                                id="max-frames"
+                                min="1"
+                                max="50"
+                                value="10"
+                            >
+                            <div
+                                class="param-value"
+                                id="frames-value"
+                            >10 帧</div>
                         </div>
                     </div>
-                    
-                    <div class="progress-container" id="progress-container">
+
+                    <div
+                        class="progress-container"
+                        id="progress-container"
+                    >
                         <div class="progress-bar">
-                            <div class="progress" id="extraction-progress"></div>
+                            <div
+                                class="progress"
+                                id="extraction-progress"
+                            ></div>
                         </div>
-                        <div class="progress-text" id="progress-text">正在提取帧: 0/10</div>
+                        <div
+                            class="progress-text"
+                            id="progress-text"
+                        >正在提取帧: 0/10</div>
                     </div>
                 </div>
                 <div class="action-group">
-                    <button id="extract-frames-btn" disabled>提取帧</button>
-                    <button id="download-frames-btn" class="download-btn" disabled>打包下载</button>
+                    <button
+                        id="extract-frames-btn"
+                        disabled
+                    >提取帧</button>
+                    <button
+                        id="download-frames-btn"
+                        class="download-btn"
+                        disabled
+                    >打包下载</button>
                 </div>
                 <div class="output-group">
                     <label>提取的帧</label>
-                    <div id="frames-output" class="frames-preview">
+                    <div
+                        id="frames-output"
+                        class="frames-preview"
+                    >
                         <div class="frame-empty">请上传视频并点击"提取帧"按钮</div>
                     </div>
                 </div>
@@ -1366,7 +1616,7 @@
         videoUploadArea.addEventListener('drop', (e) => {
             e.preventDefault();
             videoUploadArea.classList.remove('dragover');
-            
+
             if (e.dataTransfer.files.length > 0) {
                 videoInput.files = e.dataTransfer.files;
                 handleVideoFileSelect();
@@ -1377,37 +1627,37 @@
         function handleVideoFileSelect() {
             if (videoInput.files && videoInput.files[0]) {
                 videoFile = videoInput.files[0];
-                
+
                 // 验证文件类型
                 if (!videoFile.type.startsWith('video/')) {
                     alert('请选择有效的视频文件');
                     return;
                 }
-                
+
                 // 创建视频URL
                 const videoURL = URL.createObjectURL(videoFile);
                 videoPlayer.src = videoURL;
-                
+
                 // 显示视频预览
                 videoPreview.style.display = 'block';
-                
+
                 // 获取视频信息
                 videoPlayer.addEventListener('loadedmetadata', () => {
                     const duration = videoPlayer.duration;
                     const width = videoPlayer.videoWidth;
                     const height = videoPlayer.videoHeight;
-                    
+
                     videoInfo.innerHTML = `
                         <p>文件名: ${videoFile.name}</p>
                         <p>时长: ${formatTime(duration)}</p>
                         <p>分辨率: ${width} × ${height}</p>
                         <p>文件大小: ${(videoFile.size / (1024 * 1024)).toFixed(2)} MB</p>
                     `;
-                    
+
                     // 启用提取按钮
                     extractFramesBtn.disabled = false;
                 });
-                
+
                 // 重置提取结果
                 extractedFrames = [];
                 framesOutput.innerHTML = '<div class="frame-empty">请点击"提取帧"按钮</div>';
@@ -1427,23 +1677,23 @@
 
         async function extractFrames() {
             if (!videoFile) return;
-            
+
             const interval = parseFloat(frameInterval.value);
             const maxFrameCount = parseInt(maxFrames.value);
-            
+
             // 显示进度条
             progressContainer.style.display = 'block';
             extractionProgress.style.width = '0%';
             progressText.textContent = `正在提取帧: 0/${maxFrameCount}`;
-            
+
             // 重置提取结果
             extractedFrames = [];
             framesOutput.innerHTML = '';
-            
+
             // 创建Canvas用于提取帧
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d');
-            
+
             // 等待视频可以播放
             await new Promise(resolve => {
                 if (videoPlayer.readyState >= 2) {
@@ -1452,59 +1702,59 @@
                     videoPlayer.addEventListener('loadeddata', resolve);
                 }
             });
-            
+
             const duration = videoPlayer.duration;
             canvas.width = videoPlayer.videoWidth;
             canvas.height = videoPlayer.videoHeight;
-            
+
             // 计算提取的时间点
             const timePoints = [];
             for (let i = 0; i < maxFrameCount; i++) {
                 const time = Math.min(i * interval, duration - 0.1);
                 timePoints.push(time);
             }
-            
+
             // 提取每一帧
             for (let i = 0; i < timePoints.length; i++) {
                 const time = timePoints[i];
-                
+
                 // 设置视频时间
                 videoPlayer.currentTime = time;
-                
+
                 // 等待视频跳转到指定时间
                 await new Promise(resolve => {
                     videoPlayer.onseeked = () => {
                         // 绘制当前帧到Canvas
                         ctx.drawImage(videoPlayer, 0, 0, canvas.width, canvas.height);
-                        
+
                         // 转换为数据URL
                         const dataURL = canvas.toDataURL('image/jpeg', 0.9);
-                        
+
                         // 保存帧信息
                         extractedFrames.push({
                             time: time,
                             dataURL: dataURL,
                             index: i
                         });
-                        
+
                         // 更新进度
                         const progress = ((i + 1) / timePoints.length) * 100;
                         extractionProgress.style.width = `${progress}%`;
                         progressText.textContent = `正在提取帧: ${i + 1}/${maxFrameCount}`;
-                        
+
                         resolve();
                     };
                 });
-                
+
                 // 显示提取的帧
                 displayFrame(extractedFrames[i], i);
             }
-            
+
             // 隐藏进度条
             setTimeout(() => {
                 progressContainer.style.display = 'none';
             }, 1000);
-            
+
             // 启用下载按钮
             downloadFramesBtn.disabled = false;
         }
@@ -1513,7 +1763,7 @@
         function displayFrame(frame, index) {
             const frameItem = document.createElement('div');
             frameItem.className = 'frame-item';
-            
+
             frameItem.innerHTML = `
                 <img src="${frame.dataURL}" alt="帧 ${index + 1}">
                 <div class="frame-info">
@@ -1521,7 +1771,7 @@
                     时间: ${formatTime(frame.time)}
                 </div>
             `;
-            
+
             framesOutput.appendChild(frameItem);
         }
 
@@ -1530,29 +1780,29 @@
 
         async function downloadFrames() {
             if (extractedFrames.length === 0) return;
-            
+
             // 创建ZIP文件
             const zip = new JSZip();
             const imgFolder = zip.folder("frames");
-            
+
             // 添加每一帧到ZIP
             for (let i = 0; i < extractedFrames.length; i++) {
                 const frame = extractedFrames[i];
                 const base64Data = frame.dataURL.split(',')[1];
-                imgFolder.file(`frame_${i + 1}_${formatTime(frame.time).replace(':', '-')}.jpg`, base64Data, {base64: true});
+                imgFolder.file(`frame_${i + 1}_${formatTime(frame.time).replace(':', '-')}.jpg`, base64Data, { base64: true });
             }
-            
+
             // 生成ZIP文件并下载
-            const zipBlob = await zip.generateAsync({type: "blob"});
+            const zipBlob = await zip.generateAsync({ type: "blob" });
             const downloadUrl = URL.createObjectURL(zipBlob);
-            
+
             const a = document.createElement('a');
             a.href = downloadUrl;
             a.download = 'extracted_frames.zip';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-            
+
             // 清理URL
             setTimeout(() => URL.revokeObjectURL(downloadUrl), 100);
         }
